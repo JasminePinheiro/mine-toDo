@@ -1,0 +1,86 @@
+.container-fluid {
+    background-color: var(--bg-color-footer);
+    padding-bottom: 0.3rem;
+
+    .container {
+        margin-top: 8rem;
+        padding-top: 2.3rem;
+
+        .content-footer {
+
+            .logo {
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+                text-align: center;
+
+                img {
+                    width: 40px;
+                    margin-right: 10px;
+                }
+
+                .logo-text {
+                    padding-top: 10px;
+
+                    h4 {
+                        font-family: "Artifika", serif;
+                        font-weight: 400;
+                        font-style: normal;
+                        color: var(--color-primary);
+                        font-weight: bold;
+                        font-size: 1.5rem;
+
+                        span {
+                            color: var(--color-secondary);
+                        }
+                    }
+                }
+            }
+
+            ul {
+                list-style: none;
+                padding: 0; 
+
+                li {
+                    a {
+                        color: var(--color-primary);
+                        text-decoration: none;
+                    }
+                }
+            }
+
+            .footer-text {
+                margin-top: 1rem;
+
+                p {
+                    font-size: 1.1rem;
+                    color: var(--color-primary)
+                }
+            }
+        }
+    }
+
+    .line {
+        height: 1px;
+        background-color: var(--bg-color-line);
+        margin-top: 2.5rem;
+        width: 100%;
+        padding: 0px;
+    }
+
+    .copyright {
+        text-align: center;
+        margin-top: 1rem;
+        font-size: 1.1rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .content-footer{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+}

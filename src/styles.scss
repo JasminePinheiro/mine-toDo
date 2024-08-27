@@ -1,0 +1,21 @@
+:root {
+    --color-primary: #000;
+    --color-secondary: #D855D7;
+    --color-tertiary: #FEF6FE;
+    --color-details: #F7E1F7;
+    --bg-color-light: #FFFF;
+    --bg-color-footer: #E2E2E2;
+    --bg-color-line: #97979775;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+    height: 100vh;
+    width: 100%;
+}

@@ -1,0 +1,91 @@
+.container-fluid {
+    background-color: var(--color-tertiary);
+
+    .container {
+        margin-top: 8rem;
+        padding: 2.3rem;
+
+        .content-title {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            text-align: center;
+
+            h1 {
+                color: var(--color-primary);
+                font-size: 2rem;
+
+                span {
+                    color: var(--color-secondary);
+                }
+            }
+
+            .line {
+                width: 3.5rem;
+                height: 0.4rem;
+                background-color: var(--color-details);
+                margin: 1rem 0;
+                border-radius: 5px;
+            }
+        }
+
+        .content-body {
+
+            .card {
+                width: 260px;
+                padding: auto;
+                margin: 16px auto;
+                border: none;
+                z-index: 0;
+
+
+                .card-image {
+                    height: 100px;
+
+                    img {
+                        width: 100%;
+                        height: auto;
+                        z-index: -1;
+                        position: absolute;
+
+                    }
+
+                }
+
+                .card-body {
+                    background-color: var(--bg-color-light);
+                    position: relative;
+                    margin-top: 11rem;
+                    margin-left: 2rem;
+                    text-align: center;
+                    width: 200px;
+                    height: auto;
+                    z-index: 1;
+                    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.242);
+                    border-radius: 8px;
+
+                    h5 {
+                        color: var(--color-primary);
+                        font-size: 1rem;
+                    }
+
+                    p {
+                        color: var(--color-primary);
+                        font-size: 0.8rem;
+                    }
+                }
+            }
+        }
+
+    }
+}
+
+@media (max-width: 991px) {
+    .content-body {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}
