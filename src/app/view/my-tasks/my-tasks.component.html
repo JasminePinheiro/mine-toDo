@@ -1,0 +1,53 @@
+<div class="container">
+    <div class="content-title">
+        <div class="title">
+            <span>Minhas</span> tarefas
+        </div>
+    </div>
+    <div class="content-header">
+        <button type="button" data-bs-toggle="modal" data-bs-target="#exampleModal">
+            Adicionar Tarefa
+        </button>
+    </div>
+
+    <div class="content-body">
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Tarefas</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <form [formGroup]="taskForm" (ngSubmit)="addTask()">
+                            <input formControlName="title" placeholder="Título" required>
+                            <textarea formControlName="description" placeholder="Descrição" required></textarea>
+                            <div class="modal-footer">
+                                <button type="submit" class="btn-save-tasks">Salvar Tarefa</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <ul>
+            <li *ngFor="let task of tasks">
+                <div class="row mt-5 content-card">
+                    <div class="col-6 content-card-text">
+                        <h5>{{ task.titleWithNumber }}</h5>
+                        <p>{{ task.description }}</p>
+                    </div>
+                    <div class="col-6 content-card-btn">
+                        <button (click)="editTask(task)" type="button" data-bs-toggle="modal"
+                            data-bs-target="#exampleModal" class="btn-edit">Editar</button>
+                        <button (click)="deleteTask(task.id)" class="btn-delete">Excluir</button>
+                    </div>
+                </div>
+            </li>
+        </ul>
+
+
+    </div>
+</div>
