@@ -1,0 +1,25 @@
+<div class="side-nav">
+    <div class="logo-container mt-2">
+        <img src="../assets/logo.png" alt="" id="img-logo">
+
+        <button class="logo">
+        </button>
+        <div class="logo-text" *ngIf="collapsed">
+            Mine's <span>ToDo</span>
+        </div>
+        <button class="btn-close">
+            <i class='bx bx-x-circle'></i>
+        </button>
+    </div>
+
+    <ul class="sidenav-nav mt-1">
+
+        <li class="side-nav-item" *ngFor="let data of navData">
+            <a class="sidenav-nav-link" [routerLink]="data.routerLink" routerLinkActive="active"
+                [routerLinkActiveOptions]="{exact: true}">
+                <i class="sidenav-link-icon icone" [class]="data.icon"></i>
+                <span class="sidenav-link-text">{{data.label}}</span>
+            </a>
+        </li>
+    </ul>
+</div>
